@@ -28,7 +28,7 @@ class AsyncGELFHandler(GELFHandler, Thread):
             pass
 
     def _process_queue_record(self, s):
-        super(GELFHandler, self).send(s)
+        super(AsyncGELFHandler, self).send(s)
 
     def run(self):
 
