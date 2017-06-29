@@ -3,7 +3,6 @@
 from setuptools import setup, find_packages
 
 setup(
-
     name='graypy',
     version='0.1.0',
     description="An async wrapper around the GELF (Graylog Extended Log Format).",
@@ -16,7 +15,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
-    extras_require={'graypy': ['graypy>=0.2.13.2']},
+    install_requires=['graypy>=0.2.13.2'],
     classifiers=['License :: OSI Approved :: BSD License',
                  'Programming Language :: Python :: 2',
                  'Programming Language :: Python :: 3'],
