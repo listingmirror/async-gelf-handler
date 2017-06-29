@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='graypy',
-    version='0.1.0',
+    version='0.1.1',
     description="An async wrapper around the GELF (Graylog Extended Log Format).",
     long_description=open('README.rst').read(),
     keywords='logging gelf graylog2 graylog async',
