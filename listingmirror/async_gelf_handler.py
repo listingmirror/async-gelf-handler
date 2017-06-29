@@ -1,4 +1,9 @@
-from queue import Queue, Full
+try:
+    from queue import Queue as queue
+except ImportError:
+    from queue import queue as queue
+
+from queue import Full
 
 import traceback
 from graypy import GELFHandler
@@ -10,7 +15,7 @@ class AsyncGELFHandler(GELFHandler, Thread):
         max_queue_size = kwargs.pop('max_queue_size', 10000)
         super(AsyncGELFHandler, self).__init__(*args, **kwargs)
         Thread.__init__(self)
-        self.output_queue = Queue(maxsize=max_queue_size)
+        self.output_queue = queue(maxsize=max_queue_size)
 
         # Start thread
         self.start()
