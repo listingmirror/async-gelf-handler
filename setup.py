@@ -3,8 +3,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='graypy',
-    version='0.1.1',
+    name='async-gelf-handler',
+    version='0.1.2',
     description="An async wrapper around the GELF (Graylog Extended Log Format).",
     long_description=open('README.rst').read(),
     keywords='logging gelf graylog2 graylog async',
